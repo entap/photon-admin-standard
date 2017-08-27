@@ -311,7 +311,7 @@ function property_value_import($csv)
 	foreach ($data as $row) {
 		if ($row['cd'] !== '') {
 			if ($row['default']) {
-				db_delete_at('property_value', $row['cd'], 'cd');
+				db_delete_at('property_value', $row['cd'], 'property_cd');
 			} else {
 				db_replace('property_value', ['property_cd' => $row['cd'], 'value' => $row['value']]);
 			}

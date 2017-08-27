@@ -67,7 +67,6 @@ function admin_group_validate($data)
  * 管理グループの入力データを保存する
  *
  * @param array  $data   入力データ
- * @param string $action 操作の種類
  *
  * @return integer ID
  */

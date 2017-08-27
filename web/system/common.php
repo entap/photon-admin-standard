@@ -9,17 +9,20 @@
  */
 function prop($cd)
 {
-	$sql = 'SELECT COALESCE(property_value.value,property.default_value) FROM property';
-	$sql .= ' LEFT JOIN property_value ON property_value.property_cd=property.cd';
-	$sql .= ' WHERE property.cd=\'' . db_escape($cd) . '\'';
-	return db_select_value($sql);
+	global $__prop;
+	if (!isset($__prop)) {
+		$sql = 'SELECT COALESCE(property_value.value,property.default_value) AS value,property.cd FROM property';
+		$sql .= ' LEFT JOIN property_value ON property_value.property_cd=property.cd';
+		$__prop = db_select_column($sql, 'value', 'cd');
+	}
+	return $__prop[$cd];
 }
 
 /**
  * メールを送信する
  *
  * @param string $type メールテンプレートの種類
- * @param array $data 埋め込むデータ
+ * @param array  $data 埋め込むデータ
  */
 function sysmail($type, $data)
 {
