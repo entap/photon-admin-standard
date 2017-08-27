@@ -1,0 +1,7 @@
+th {
+    background: #f8f8f8;
+}
+
+[data-vif] {
+    display: none;
+}

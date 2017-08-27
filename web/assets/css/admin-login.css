@@ -1,0 +1,16 @@
+#login form {
+    width: 320px;
+    background: #fff;
+    padding: 10px;
+    margin: 100px auto 0;
+    border: 1px solid #eee;
+}
+
+#login form h1 {
+    font-size: 30px;
+}
+
+#login form input[type=text],
+#login form input[type=password] {
+    margin-bottom: 10px;
+}
