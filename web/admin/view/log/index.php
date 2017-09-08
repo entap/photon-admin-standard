@@ -33,7 +33,7 @@
 						<tr>
 							<th class="col-xs-3"><?= h($name) ?></th>
 							<td class="col-xs-9">
-								<div><?= h($record[$field]) ?></div>
+								<div style="overflow-wrap: break-word; overflow-x: scroll;"><?= h($record[$field]) ?></div>
 							</td>
 						</tr>
 					<?php } ?>

@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../system/photon/photon.php';
 require_once __DIR__ . '/../system/admin/admin.php';
 require_once __DIR__ . '/../system/admin/property.php';
+require_once __DIR__ . '/../system/admin/property_value.php';
 require_once __DIR__ . '/../system/admin/property_group.php';
 
 /**
@@ -49,11 +50,12 @@ function action_edit($data)
  */
 function action_import($data)
 {
-	ini_set('display_errors', 1);
 	if (is_request_post()) {
-		$content = @file_get_contents($_FILES['file']['tmp_name']);
-		if (property_value_import($content)) {
-			return redirect('property.php');
+		if ($_FILES['file']['error'] == UPLOAD_ERR_OK) {
+			$content = file_get_contents($_FILES['file']['tmp_name']);
+			if (property_value_import($content)) {
+				return redirect('property.php');
+			}
 		}
 	}
 	form_set_value(NULL, $data);
@@ -69,7 +71,7 @@ function action_export($data)
 }
 
 /**
- * [開発者モード] 編集
+ * [スキーム編集モード] 編集
  */
 function action_dev_edit($data)
 {
@@ -93,7 +95,7 @@ function action_dev_edit($data)
 }
 
 /**
- * [開発者モード] プロパティの削除
+ * [スキーム編集モード] プロパティの削除
  */
 function action_dev_delete($data)
 {
@@ -103,7 +105,7 @@ function action_dev_delete($data)
 }
 
 /**
- * [開発者モード] プロパティのグループの編集
+ * [スキーム編集モード] プロパティのグループの編集
  */
 function action_dev_group($data)
 {
@@ -125,7 +127,7 @@ function action_dev_group($data)
 }
 
 /**
- * [開発者モード] プロパティのグループの削除
+ * [スキーム編集モード] プロパティのグループの削除
  */
 function action_dev_group_delete($data)
 {
@@ -135,14 +137,16 @@ function action_dev_group_delete($data)
 }
 
 /**
- * [開発者モード] プロパティのインポート
+ * [スキーム編集モード] プロパティのインポート
  */
 function action_dev_import($data)
 {
 	if (is_request_post()) {
-		$content = @file_get_contents($_FILES['file']['tmp_name']);
-		if (property_import($content)) {
-			return redirect('property.php?dev=1');
+		if ($_FILES['file']['error'] == UPLOAD_ERR_OK) {
+			$content = file_get_contents($_FILES['file']['tmp_name']);
+			if (property_import($content)) {
+				return redirect('property.php');
+			}
 		}
 	}
 	form_set_value(NULL, $data);
@@ -150,7 +154,7 @@ function action_dev_import($data)
 }
 
 /**
- * [開発者モード] プロパティのエクスポート
+ * [スキーム編集モード] プロパティのエクスポート
  */
 function action_dev_export($data)
 {

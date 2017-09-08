@@ -3,11 +3,12 @@
 /**
  * プロパティの値を取得する
  *
- * @param string $cd プロパティの識別子
+ * @param string $cd            プロパティの識別子
+ * @param mixed  $default_value デフォルト値
  *
  * @return string プロパティの値
  */
-function prop($cd)
+function prop($cd, $default_value = NULL)
 {
 	global $__prop;
 	if (!isset($__prop)) {
@@ -15,7 +16,7 @@ function prop($cd)
 		$sql .= ' LEFT JOIN property_value ON property_value.property_cd=property.cd';
 		$__prop = db_select_column($sql, 'value', 'cd');
 	}
-	return $__prop[$cd];
+	return isset($__prop['cd']) ? $__prop['cd'] : $default_value;
 }
 
 /**
