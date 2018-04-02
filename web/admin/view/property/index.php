@@ -68,6 +68,7 @@
 			<?php } ?>
 			</tbody>
 		</table>
+		<?= $data['html'] ?>
 	</div>
 </div>
 <?php require_once __DIR__ . '/../common/footer.php' ?>
