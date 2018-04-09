@@ -16,7 +16,7 @@ function prop($cd, $default_value = NULL)
 		$sql .= ' LEFT JOIN property_value ON property_value.property_cd=property.cd';
 		$__prop = db_select_column($sql, 'value', 'cd');
 	}
-	return isset($__prop['cd']) ? $__prop['cd'] : $default_value;
+	return isset($__prop[$cd]) ? $__prop[$cd] : $default_value;
 }
 
 /**

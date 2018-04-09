@@ -68,7 +68,15 @@ function admin_group_id_constraint()
  */
 function admin_controller_active($filename)
 {
-	return basename($_SERVER['PHP_SELF']) == $filename ? 'active' : '';
+	list ($name, $query_str) = explode('?', $filename);
+	$is_active = basename($_SERVER['PHP_SELF']) == $name;
+	if ($query_str) {
+		parse_str($query_str, $query_array);
+		foreach ($query_array as $k => $v) {
+			$is_active &= (array_get($_GET, $k) == $v);
+		}
+	}
+	return $is_active ? 'active' : '';
 }
 
 /**

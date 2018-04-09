@@ -81,7 +81,7 @@ function property_validate($data, $action)
 	}
 	rule('property[name]', ['required' => 'yes', 'max_chars' => 20]);
 	rule('property[description]', ['required' => 'no', 'max_chars' => 10000]);
-	rule('property[cd]', ['required' => 'yes', 'type' => 'alnum', 'max_chars' => 20]);
+	rule('property[cd]', ['required' => 'yes', 'type' => 'alnum_dash', 'max_chars' => 20]);
 	rule('property[property_type_id]', ['required' => 'yes', 'option' => 'property_type']);
 	rule('property[default_value]', property_value_rule($data['property']));
 	rule('property[order]', ['required' => 'yes', 'type' => 'integer']);
