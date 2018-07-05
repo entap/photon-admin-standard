@@ -14,12 +14,10 @@
 <body>
 <div id="login">
 	<form action="login.php" method="post">
-		<h1>ログイン</h1>
+		<p class="text-center"><img src="/assets/icon/user-3.svg" width="100"></p>
 		<?= form_error('login') ?>
-		<label>ユーザ名</label>
-		<?= form_text('username', 'class="form-control"') ?>
-		<label>パスワード</label>
-		<?= form_password('password', 'class="form-control"') ?>
+		<?= form_text('username', 'class="form-control" placeholder="ユーザ名"') ?>
+		<?= form_password('password', 'class="form-control" placeholder="パスワード"') ?>
 		<button type="submit" class="btn btn-primary btn-block">ログイン</button>
 	</form>
 </div>

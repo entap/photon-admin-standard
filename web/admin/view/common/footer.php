@@ -1,7 +1,7 @@
 </div>
 <footer>
 	<hr>
-	<p class="text-center">Copyright &copy; 2017 Entap,Inc. All rights reserved.</p>
+	<p class="text-center">Copyright &copy; 2018 Entap,Inc. All rights reserved.</p>
 </footer>
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
