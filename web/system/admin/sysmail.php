@@ -67,7 +67,7 @@ function sysmail_validate($data)
 	rule('sysmail[id]');
 	rule('sysmail[sysmail_type_id]', ['required' => 'no', 'options' => 'sysmail_type']);
 	rule('sysmail[name]', ['required' => 'yes', 'max_chars' => 20]);
-	rule('sysmail[note]', ['required' => 'yes', 'max_chars' => 1000]);
+	rule('sysmail[note]', ['required' => 'no', 'max_chars' => 1000]);
 	rule('sysmail[to]', ['required' => 'yes', 'max_chars' => 1000]);
 	rule('sysmail[from]', ['required' => 'yes', 'max_chars' => 100]);
 	rule('sysmail[subject]', ['required' => 'yes', 'max_chars' => 100]);
