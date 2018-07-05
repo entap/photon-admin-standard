@@ -52,7 +52,7 @@ function sysmail($type, $data)
 	// メール送信する
 	foreach ($sysmails as $sysmail) {
 		// 変数を埋め込む
-		foreach (['to', 'from', 'subject', 'messsage'] as $key) {
+		foreach (['to', 'from', 'subject', 'message'] as $key) {
 			$sysmail[$key] = embed($sysmail[$key], $data);
 		}
 		// 指定された宛先に対し、メールを送信する
