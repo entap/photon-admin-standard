@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../system/photon/photon.php';
+require_once __DIR__ . '/../system/common.php';
 require_once __DIR__ . '/../system/admin/admin.php';
 
 function action_index($data)

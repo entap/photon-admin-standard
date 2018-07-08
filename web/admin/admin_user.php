@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../system/photon/photon.php';
+require_once __DIR__ . '/../system/common.php';
 require_once __DIR__ . '/../system/admin/admin.php';
 require_once __DIR__ . '/../system/admin/admin_user.php';
 require_once __DIR__ . '/../system/admin/admin_group.php';
