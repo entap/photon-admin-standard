@@ -14,7 +14,7 @@
 <body>
 <div id="login">
 	<form action="login.php" method="post">
-		<p class="text-center"><img src="/assets/icon/user-3.svg" width="100"></p>
+		<p class="text-center" style="font-size: 80px; color: darkgray"><span class="glyphicon glyphicon-user"></span></p>
 		<?= form_error('login') ?>
 		<?= form_text('username', 'class="form-control" placeholder="ユーザ名"') ?>
 		<?= form_password('password', 'class="form-control" placeholder="パスワード"') ?>
