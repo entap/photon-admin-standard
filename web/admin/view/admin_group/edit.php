@@ -16,6 +16,13 @@
 								<?= form_text('admin_group[name]', 'class="form-control" size="40"') ?>
 							</td>
 						</tr>
+						<tr>
+							<th class="col-xs-3">親グループ</th>
+							<td>
+								<?= form_error('admin_group[parent_id]') ?>
+								<?= form_select_assoc('admin_group[parent_id]', admin_group_parent_get_options(form_get_value('admin_group[id]')), 'class="form-control" blank=""') ?>
+							</td>
+						</tr>
 						</tbody>
 					</table>
 				</div>

@@ -46,7 +46,7 @@ function admin_has_role($role)
 }
 
 /**
- * グループIDによる拘束条件を取得する
+ * ログイン中の管理ユーザがアクセスできるグループIDを取得する
  *
  * @return integer 拘束条件となるグループID
  */
@@ -57,6 +57,16 @@ function admin_group_id_constraint()
 	} else {
 		return 0; // 拘束条件なし
 	}
+}
+
+/**
+ * ログイン中の管理ユーザがアクセスできるSQL条件を設定する
+ */
+function sql_where_admin_group($admin_group_table = 'admin_group')
+{
+	$my_admin_group_id = admin_user_me()['admin_group_id'];
+	$my_admin_group = admin_group_get($my_admin_group_id);
+	sql_where($admin_group_table . '.path LIKE \'' . $my_admin_group['path'] . '%\'');
 }
 
 ?>

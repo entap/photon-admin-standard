@@ -25,7 +25,7 @@
 			<tbody>
 			<?php foreach ($data['records'] as $record) { ?>
 				<tr>
-					<td><?= h($record['name']) ?></td>
+					<td style="text-indent: <?= admin_group_depth($record) ?>em;"><?= h($record['name']) ?></td>
 					<td><?= h($record['admin_user_count']) ?></td>
 					<td>
 						<div class="text-center">
