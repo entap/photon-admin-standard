@@ -8,7 +8,7 @@ body {
     padding: 30px;
     margin: 100px auto 0;
     border: 1px solid #eee;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
 }
 
 #login form h1 {
