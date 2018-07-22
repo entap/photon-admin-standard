@@ -1,9 +1,14 @@
+body {
+    background: #eeeeee;
+}
+
 #login form {
     width: 320px;
     background: #fff;
     padding: 30px;
     margin: 100px auto 0;
     border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #login form h1 {
