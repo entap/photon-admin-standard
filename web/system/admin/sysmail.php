@@ -11,7 +11,7 @@ function sysmail_type_get_options()
 }
 
 /**
- * メールテンプレートの権限を取得するSQLを生成する
+ * メールテンプレートを取得するSQLを生成する
  *
  * @param array $cond 検索条件
  *
@@ -39,7 +39,7 @@ function sysmail_sql($cond)
 }
 
 /**
- * メールテンプレートの権限を取得する
+ * メールテンプレートを取得する
  *
  * @param integer $id メールテンプレートの権限のID
  *
@@ -51,7 +51,7 @@ function sysmail_get($id)
 }
 
 /**
- * メールテンプレートの権限の入力データをバリデーションする
+ * メールテンプレートの入力データをバリデーションする
  *
  * @param array $data 入力データ
  *
@@ -82,7 +82,7 @@ function sysmail_validate($data)
 }
 
 /**
- * メールテンプレートの権限の入力データを保存する
+ * メールテンプレートの入力データを保存する
  *
  * @param array  $data   入力データ
  * @param string $action 操作の種類
@@ -100,7 +100,7 @@ function sysmail_save($sysmail)
 }
 
 /**
- * メールテンプレートの権限を削除する
+ * メールテンプレートを削除する
  *
  * @param integer $id メールテンプレートの権限のID
  *
