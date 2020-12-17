@@ -1,5 +1,5 @@
 <?php require_once __DIR__ . '/../common/header.php' ?>
-<div class="modal-dialog">
+<div class="modal-dialog modal-lg">
 	<div class="modal-content">
 		<div class="modal-header">
 			<h4 class="modal-title">プロパティの編集</h4>
@@ -11,14 +11,14 @@
 				<table class="table table-bordered">
 					<tbody>
 					<tr>
-						<th class="col-xs-3">名前</th>
+						<th class="col-3">名前</th>
 						<td>
 							<?= form_error('property[name]') ?>
 							<?= form_text('property[name]', 'class="form-control"') ?>
 						</td>
 					</tr>
 					<tr>
-						<th class="col-xs-3">説明文</th>
+						<th class="col-3">説明文</th>
 						<td>
 							<?= form_error('property[description]') ?>
 							<?= form_textarea('property[description]', 'class="form-control" rows="2"') ?>
@@ -29,28 +29,28 @@
 				<table class="table table-bordered">
 					<tbody>
 					<tr>
-						<th class="col-xs-3">識別子</th>
+						<th class="col-3">識別子</th>
 						<td>
 							<?= form_error('property[cd]') ?>
 							<?= form_text('property[cd]', 'class="form-control"') ?>
 						</td>
 					</tr>
 					<tr>
-						<th class="col-xs-3">プロパティの型</th>
+						<th class="col-3">プロパティの型</th>
 						<td class="form-inline">
 							<?= form_error('property[property_type_id]') ?>
 							<?= form_select_assoc('property[property_type_id]', 'property_type', 'class="form-control"') ?>
 						</td>
 					</tr>
 					<tr>
-						<th class="col-xs-3">デフォルト値</th>
+						<th class="col-3">デフォルト値</th>
 						<td>
 							<?= form_error('property[default_value]') ?>
 							<?= form_textarea('property[default_value]', 'class="form-control" rows="2"') ?>
 						</td>
 					</tr>
 					<tr>
-						<th class="col-xs-3">表示順序</th>
+						<th class="col-3">表示順序</th>
 						<td class="form-inline">
 							<?= form_error('property[order]') ?>
 							<?= form_text('property[order]', 'class="form-control" size="5"') ?>
@@ -63,7 +63,7 @@
 				<?php if (isset($property['id'])) { ?>
 					<a href="property.php?action=dev_delete&id=<?= $property['id'] ?>" class="btn btn-danger">削除</a>
 				<?php } ?>
-				<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
 				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> 保存</button>
 			</div>
 		</form>

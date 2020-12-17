@@ -9,15 +9,15 @@
 <form action="sysmail.php" class="form-inline">
 	<?= form_select_assoc('c[sysmail_type_id]', 'sysmail_type', 'class="form-control" blank="全て"') ?>
 	<?= form_text('c[keywords]', 'class="form-control" size="20"') ?>
-	<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> 検索</button>
+	<button type="submit" class="btn btn-secondary"><span class="glyphicon glyphicon-search"></span> 検索</button>
 </form>
 </p>
 <table class="table table-bordered">
 	<thead>
 	<tr>
-		<th class="col-xs-2">種類</th>
-		<th class="col-xs-7">管理用の名前</th>
-		<th class="col-xs-3">操作</th>
+		<th class="col-2">種類</th>
+		<th class="col-7">管理用の名前</th>
+		<th class="col-3">操作</th>
 	</tr>
 	</thead>
 	<tbody>

@@ -201,22 +201,22 @@ config('paginate_per_page', 30);
 config('paginate_num_links', 5);
 
 // 最初に移動するタグ
-config('paginate_first_tag', '<li><a href="{url}">&laquo;</a></li>');
+config('paginate_first_tag', '<li class="page-item"><a class="page-link" href="{url}">&laquo;</a></li>');
 
 // 前に移動するタグ
-config('paginate_prev_tag', '<li><a href="{url}">&lt;</a></li>');
+config('paginate_prev_tag', '<li class="page-item"><a class="page-link" href="{url}">&lt;</a></li>');
 
 // ページ番号に移動するタグ
-config('paginate_link_tag', '<li><a href="{url}">{page}</a></li>');
+config('paginate_link_tag', '<li class="page-item"><a class="page-link" href="{url}">{page}</a></li>');
 
 // 現在のページのタグ
-config('paginate_active_tag', '<li class="active"><a href="{url}">{page}</a></li>');
+config('paginate_active_tag', '<li class="page-item active"><a class="page-link" href="{url}">{page}</a></li>');
 
 // 次に移動するタグ
-config('paginate_next_tag', '<li><a href="{url}">&gt;</a></li>');
+config('paginate_next_tag', '<li class="page-item"><a class="page-link" href="{url}">&gt;</a></li>');
 
 // 最後に移動するタグ
-config('paginate_last_tag', '<li><a href="{url}">&raquo;</a></li>');
+config('paginate_last_tag', '<li class="page-item"><a class="page-link" href="{url}">&raquo;</a></li>');
 
 // ページネーションの開始タグ
 config('paginate_open_tag', '<nav><ul class="pagination">');

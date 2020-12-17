@@ -14,7 +14,7 @@
 		<table class="table table-bordered">
 			<tbody>
 			<tr>
-				<th class="col-xs-3">管理用の名前</th>
+				<th class="col-3">管理用の名前</th>
 				<td>
 					<?= form_error('sysmail[name]') ?>
 					<?= form_text('sysmail[name]', 'class="form-control"') ?>
@@ -33,7 +33,7 @@
 		<table class="table table-bordered">
 			<tbody>
 			<tr>
-				<th class="col-xs-3">種類</th>
+				<th class="col-3">種類</th>
 				<td class="form-inline">
 					<?= form_error('sysmail[sysmail_type_id]') ?>
 					<?= form_select_assoc('sysmail[sysmail_type_id]', 'sysmail_type', 'class="form-control" blank=""') ?>
@@ -73,7 +73,7 @@
 		<table class="table table-bordered form-inline">
 			<tbody>
 			<tr>
-				<th class="col-xs-3">有効</th>
+				<th class="col-3">有効</th>
 				<td>
 					<?= form_error('sysmail[enable_flag]') ?>
 					<?= form_select_assoc('sysmail[enable_flag]', 'boolean', 'class="form-control"') ?>
