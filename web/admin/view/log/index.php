@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . '/../common/header.php' ?>
 <div class="row">
-	<div class="col-3">
+	<div class="col-xs-3">
 		<form action="log.php">
 			<div class="form-group">
 				<label>対象のログ</label>
@@ -21,7 +21,7 @@
 			<button class="btn btn-primary btn-block"><span class="glyphicon glyphicon-search"></span> 検索</button>
 		</form>
 	</div>
-	<div class="col-9">
+	<div class="col-xs-9">
 		<?php if (isset($c['table'])) { ?>
 			<div class="page-header">
 				<h1><?= form_static_assoc('c[table]', $tables) ?></h1>
@@ -31,8 +31,8 @@
 					<tbody>
 					<?php foreach ($fields as $field => $name) { ?>
 						<tr>
-							<th class="col-3"><?= h($name) ?></th>
-							<td class="col-9">
+							<th class="col-xs-3"><?= h($name) ?></th>
+							<td class="col-xs-9">
 								<div style="overflow-wrap: break-word; overflow-x: scroll;"><?= h($record[$field]) ?></div>
 							</td>
 						</tr>

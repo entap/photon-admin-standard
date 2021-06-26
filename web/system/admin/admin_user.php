@@ -26,10 +26,7 @@ function admin_user_login($username, $password)
 	sql_table('admin_user');
 	sql_where_integer('admin_user.enable_flag', 1);
 	sql_where_string('admin_user.username', $username);
-	sql_where_begin('OR');
 	sql_where_string('admin_user.password', admin_user_hash_password($password));
-    sql_where_string('admin_user.password', ''); // 初期設定の場合
-    sql_where_end();
 	$admin_user = db_select_row(sql_select());
 	if ($admin_user === NULL) {
 		db_insert('log_admin_login_error', [

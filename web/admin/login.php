@@ -12,7 +12,7 @@ function action_index($data)
 {
 	if (is_request_post()) {
 		if (admin_user_login($data['username'], $data['password'])) {
-			redirect('/admin/index.php');
+			redirect('/admin/');
 		}
 	}
 	render('view/login/index.php', $data);

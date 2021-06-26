@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/../common/header.php' ?>
 <div class="row">
-	<div class="col-3"><?php include __DIR__ . '/../common/sidebar_admin_user.php' ?></div>
-	<div class="col-9">
+	<div class="col-xs-3"><?php include __DIR__ . '/../common/sidebar_admin_user.php' ?></div>
+	<div class="col-xs-9">
 		<div class="page-header">
 			<h1>役割</h1>
 		</div>
@@ -11,15 +11,15 @@
 		<p>
 		<form action="admin_role.php" class="form-inline">
 			<?= form_text('c[keywords]', 'class="form-control" size="20"') ?>
-			<button type="submit" class="btn btn-secondary"><span class="glyphicon glyphicon-search"></span> 検索</button>
+			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> 検索</button>
 		</form>
 		</p>
 		<table class="table table-bordered">
 			<thead>
 			<tr>
-				<th class="col-7">役割の名前</th>
-				<th class="col-2">ユーザ数</th>
-				<th class="col-3">操作</th>
+				<th class="col-xs-7">役割の名前</th>
+				<th class="col-xs-2">ユーザ数</th>
+				<th class="col-xs-3">操作</th>
 			</tr>
 			</thead>
 			<tbody>

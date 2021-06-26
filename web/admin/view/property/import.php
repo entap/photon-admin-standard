@@ -1,5 +1,5 @@
 <?php require_once __DIR__ . '/../common/header.php' ?>
-<div class="modal-dialog modal-lg">
+<div class="modal-dialog">
 	<div class="modal-content">
 		<div class="modal-header">
 			<h4 class="modal-title">設定の読込</h4>
@@ -10,7 +10,7 @@
 				<?= form_error('file') ?>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
 				<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> 実行</button>
 			</div>
 		</form>
